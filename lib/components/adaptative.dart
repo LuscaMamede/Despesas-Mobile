@@ -1,15 +1,15 @@
-import 'package:flutter/cupertino.dart';
 import 'dart:io';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class AdaptativeButton extends StatelessWidget {
   final String label;
   final Function() onPressed;
 
-  const AdaptativeButton({
+  const AdaptativeButton(
+    this.label,
+    this.onPressed, {
     Key? key,
-    required this.label,
-    required this.onPressed,
   }) : super(key: key);
 
   @override
@@ -24,10 +24,12 @@ class AdaptativeButton extends StatelessWidget {
             ),
           )
         : ElevatedButton(
-            child: Text(label,
-                style: TextStyle(
-                  color: Theme.of(context).textTheme.button?.color,
-                )),
+            child: Text(
+              label,
+              style: TextStyle(
+                color: Theme.of(context).textTheme.button?.color,
+              ),
+            ),
             onPressed: onPressed,
           );
   }
