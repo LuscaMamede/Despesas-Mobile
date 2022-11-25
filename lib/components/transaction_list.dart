@@ -15,7 +15,7 @@ class TransactionList extends StatelessWidget {
         ? LayoutBuilder(
             builder: (ctx, constraints) {
               return Column(
-                children: <Widget>[
+                children: [
                   const SizedBox(height: 20),
                   Text(
                     'Nenhuma Transação Cadastrada!',
