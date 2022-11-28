@@ -5,6 +5,7 @@ import 'package:expenses/components/transaction_form.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
+import 'components/transaction_form.dart';
 import 'components/transaction_list.dart';
 import 'components/chart.dart';
 import 'models/transaction.dart';
@@ -142,6 +143,22 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
+            // if (isLandscape)
+            //   Row(
+            //     mainAxisAlignment: MainAxisAlignment.center,
+            //     children: [
+            //       const Text('Exibir Gráfico'),
+            //       Switch.adaptive(
+            //         activeColor: Theme.of(context).colorScheme.secondary,
+            //         value: _showChart,
+            //         onChanged: (value) {
+            //           setState(() {
+            //             _showChart = value;
+            //           });
+            //         },
+            //       ),
+            //     ],
+            //   ),
             if (_showChart || !isLandscape)
               SizedBox(
                 height: availableHeight * (isLandscape ? 0.8 : 0.3),
